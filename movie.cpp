@@ -6,35 +6,30 @@ int main() {
 	int age;
 	double money;
 	bool parent;
-	string toPrintShow, toPrintMoney;	                                                                        
+	string toPrintShow, toPrintMoney;	
 	cout << "Enter age: "; 
 	cin >> age;
+    //Determine age eligibility based on age and parent presence
 	if(age<13) {
-		cout << "With parent? ";
-		cin >> parent;
-		if(parent)
-			toPrintShow = "PG & G show. ";
-		else
-			toPrintShow = "G show. ";
-	}
-	else if(age<16) {
-		cout << "With parent? ";
-		cin >> parent;
-		if(parent)
-			toPrintShow = "R, PG & G show. ";
-		else
-			toPrintShow = "PG & G show. ";
-    }
-    else
+        cout << "With parent? "; 
+	    cin >> parent;
+        toPrintShow = parent ? "PG & G show. " : "G show. ";
+    } else if(age<16) {
+        toPrintShow = parent ? "R, PG & G show. " : "PG & G show. ";
+    } else {
 		toPrintShow = "R, PG & G show. ";
+    }
+
 	cout << "Enter money: ";	
 	cin >> money;
-	if(money<7.5)	
+    // Determiine money eligibility for show types
+    if(money<7.5) {	
 		toPrintMoney = "Not enough money. ";
-	else if(money<10.5)
+    } else if(money<10.5) {
 		toPrintMoney = "Can go to matinee show. ";
-	else
+    } else {
 		toPrintMoney = "Can go to evening & matinee show. ";
+    }
 	cout << toPrintShow << endl;
 	cout << toPrintMoney << endl;
 
