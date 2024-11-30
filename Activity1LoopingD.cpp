@@ -1,4 +1,5 @@
 #include <iostream>
+
 using namespace std;
 
 int main() {
@@ -10,5 +11,6 @@ int main() {
         for (int z = i; z > 0; z--) cout << z << " ";
         cout << '\n';
     }
+
     return 0;
 }
