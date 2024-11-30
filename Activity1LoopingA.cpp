@@ -14,7 +14,7 @@ int main() {
                 cout << "* ";
             }
         }
-        cout << endl;
+        cout << "\n";
     }
     
     return 0;
